@@ -1,0 +1,12 @@
+#!/bin/sh
+
+r_num=$runNum
+strt=$(date +%H:%M:%S)
+profDir=$(mktemp -p /work -d -t ci-XXXXXXXXXX)
+echo "Run $r_num: profile dir='$profDir', workdir=$(pwd)"
+
+libreoffice --headless -env:UserInstallation="file://${profDir}" --convert-to odg $1 >> /work/run_out.txt
+
+rm -rf $profDir
+endt=$(date +%H:%M:%S)
+echo "Run $r_num: Duration: $strt - $endt"
