@@ -1,8 +1,0 @@
-FROM alpine:latest
-
-RUN \
-#    apk update && \
-    apk add --no-cache openjdk8-jre libreoffice-core libreoffice-writer  mc && \
-    ln -s /usr/bin/python /usr/bin/python3.8
-
-ADD content/bin/ /usr/local/bin/
