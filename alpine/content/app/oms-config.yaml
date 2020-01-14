@@ -1,0 +1,16 @@
+# config file 
+
+server:
+   port: 8421 
+
+paths:
+    templateBase:   '/data/repository/templates'
+    signatures:     '/data/repository/assets/signatures'
+    images:         '/data/repository/assets/images'
+    libreoffice:    '/usr/bin/libreoffice'
+
+signatures:
+    signature1: image1
+    signature2: image2
+    signature3: image3
+    signature4: image4
