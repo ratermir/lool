@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd /app
-python tplserver.py 
+python tplserver.py

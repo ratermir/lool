@@ -30,7 +30,7 @@ RUN echo "**** install Python ****" && \
     rm libdbahsqllo.so libdbpool2.so libdbaxmllo.so liblocaledata_euro.so liblocaledata_others.so libcuilo.so libdeploymentgui.so && \
 \
     echo "**** install libreoffice and related ****" && \
-    pip install pystache && \
+    pip install pystache Pillow && \
     apk add py3-yaml && \
     addgroup app && \
     adduser -u 1001 -G app -h /app -s /dev/null -D app && \
@@ -38,9 +38,6 @@ RUN echo "**** install Python ****" && \
     chown -R app:app /app && chmod +s /app && \
     echo "**** performing additional changes ****" && \
     chmod +x /entrypoint.sh
-    
-
-
 
 USER app
 ENTRYPOINT /entrypoint.sh
